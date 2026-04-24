@@ -29,7 +29,7 @@ RUN pip install https://github.com/explosion/spacy-models/releases/download/en_c
 COPY . .
 
 # Expose port
-EXPOSE ${PORT}
+EXPOSE $PORT
 
 # Run with proper production settings
 CMD uvicorn main:app --host 0.0.0.0 --port $PORT
